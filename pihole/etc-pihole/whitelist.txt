@@ -1,0 +1,2 @@
+device-metrics-us.amazon.com
+device-metrics-us-2.amazon.com
