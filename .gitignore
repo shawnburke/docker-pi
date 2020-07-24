@@ -1,1 +1,17 @@
+# use envrc files for private info, don't commit.
 .envrc
+
+active
+
+# projects not to commit
+amcrest-viewer
+arm-monitoring
+backup-cloud
+dyndns
+ftp
+minidlna
+nginx
+openvpn
+plex
+samba
+transmission
