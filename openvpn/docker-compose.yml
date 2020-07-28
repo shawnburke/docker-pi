@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  openvpn:
+    build: ./docker-openvpn
+    container_name: openvpn
+    image: openvpn:current
+    cap_add: 
+      - NET_ADMIN
+    ports:
+      - ${OPENVPN_PORT}:1194/udp
+    environment:
+      TZ: '${TIMEZONE}'
+    volumes:
+      - "${DATA_VOLUME}:/etc/openvpn"
+    restart: always 
+
+
