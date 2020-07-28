@@ -5,9 +5,9 @@ services:
     image: backup-cloud:current
     container_name: backup-cloud
     volumes:
-      - ${BACKUP_VOLUME}:/mnt/gdrive
+      - ${BACKUP_VOLUME}:/mnt/backup
     environment:
       - REFRESH=${REFRESH} 
     restart: always
     healthcheck:
-      test: "ls /mnt/gdrive || exit 1"
+      test: "ls /mnt/backup || exit 1"
