@@ -1,0 +1,13 @@
+version: "3"
+services:
+  backup-cloud:
+    build: .
+    image: backup-cloud:current
+    container_name: backup-cloud
+    volumes:
+      - ${BACKUP_VOLUME}:/mnt/gdrive
+    environment:
+      - REFRESH=${REFRESH} 
+    restart: always
+    healthcheck:
+      test: "ls /mnt/gdrive || exit 1"

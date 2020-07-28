@@ -1,0 +1,7 @@
+[gdrive]
+type = drive
+client_id = 
+client_secret = 
+token = {USE rconf config TO CREATE}
+scope = drive.readonly
+
