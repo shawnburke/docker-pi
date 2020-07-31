@@ -1,0 +1,13 @@
+version: "3"
+services:
+  dyndns:
+    build: .
+    image: dyndns:current
+    container_name: dyndns
+    volumes:
+      - ./.aws/dyndns-creds:/mnt/aws
+    environment:
+      - DOMAIN=${DOMAIN} 
+      - ZONE=${ZONE}
+      - REFRESH=${REFRESH}
+    restart: always

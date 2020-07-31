@@ -6,7 +6,6 @@ active
 # projects not to commit
 amcrest-viewer
 arm-monitoring
-dyndns
 ftp
 minidlna
 nginx
