@@ -8,6 +8,7 @@ IP address of the host.
 1. create a subdir called `.aws`, with a file `dyndns-creds` containing your AWS secrets
 2. add an `.envrc` file with DOMAIN and ZONE exported (assumes you are using `direnv`)
 3. (optional) change REFRESH to a value other than 1800 (30 mins)
+4. `docker-compose up -d`
 
 ### Examples:
 
