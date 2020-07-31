@@ -10,7 +10,7 @@ _Note that I run [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-
 
 Getting up and running requires the following:
 
-* Set up SSH. Strongly recommend only allowing `PubKeyAuthentication` and make sure you never allow your new Pi to be put onto a network that exposes it's port 22. Don't ask.
+* Set up SSH. Strongly recommend only allowing `PubKeyAuthentication`. Make sure you *never* allow your new Pi to be put onto a network that has port forwarding to its IP on port 22, with the default username/password. I, uh, heard that from a friend.
 
 * Set up Docker and Docker Compose.  Follow [this guide](https://devdojo.com/bobbyiliev/how-to-install-docker-and-docker-compose-on-raspberry-pi) to get it up and running.
 
