@@ -1,0 +1,10 @@
+version: "3"
+services:
+  n8n:
+    image: n8nio/n8n:latest-rpi
+    container_name: n8n
+    ports:
+        - ${PORT}:5678
+    volumes: 
+        - ${DATA_VOLUME}:/root/.n8n
+    restart: always
