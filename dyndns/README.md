@@ -1,32 +1,12 @@
 ## Dynamic DNS
 
-This container runs a node app [dynroute](https://github.com/alessioalex/dynroute) that updates Route 53 with the current 
-IP address of the host.
+This uses the [ddns-route53](https://crazymax.dev/ddns-route53) tool
 
 ### Setup
 
-1. create a subdir called `.aws`, with a file `dyndns-creds` containing your AWS secrets
-2. add an `.envrc` file with DOMAIN and ZONE exported (assumes you are using `direnv`)
-3. (optional) change REFRESH to a value other than 1800 (30 mins)
-4. `docker-compose up -d`
+Set up the following env variables:
 
-### Examples:
-
-#### .aws/dyndns-creds
-
-```
-[credentials]
-accessKeyId=AWS_ACCESS_ID
-secretAccessKey=AWS_SECRET_KEY
-```
-
-#### .envrc
-
-```
-export DOMAIN=your.domain.name
-export ZONE=YOUR_ROUTE53_ZONE
-```
-
-####
-
-
+AWS_ACCESS_KEY=[key]
+AWS_SECRET_KEY=[key]
+AWS_ZONEID=ZABC1123
+AWS_RECORDSET=foo.bar.com
