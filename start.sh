@@ -3,6 +3,6 @@
 cat active | while read p
 do 
   echo "Starting $p"
-  (cd p && docker-compose up -d)
+  (cd $p && docker-compose up -d)
 done
 
