@@ -4,8 +4,8 @@ services:
     image: greensheep/plex-server-docker-rpi:latest
     container_name: plex
     network_mode: "host"
-    ports:
-      - ${PLEX_PORT}:32400
+#    ports:
+#      - ${PLEX_PORT}:32400
     restart: always
     volumes:
       - ${CONFIG_VOLUME}:/config

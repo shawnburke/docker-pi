@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+    socks5:
+        image: serjs/go-socks5-proxy
+        container_name: socks5
+        restart: always
+        ports:
+            - 1080:1080
+
+

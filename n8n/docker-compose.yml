@@ -1,10 +1,12 @@
 version: "3"
 services:
   n8n:
-    image: n8nio/n8n:latest-rpi
+    image: n8nio/n8n:0.84.1-rpi
     container_name: n8n
+    environment:
+      TZ: ${TZ}
     ports:
         - ${PORT}:5678
     volumes: 
-        - ${DATA_VOLUME}:/root/.n8n
+        - ${DATA_VOLUME}:/home/node/.n8n
     restart: always
