@@ -1,0 +1,12 @@
+version: "3"
+services:
+  privoxy:
+    image: dperson/torproxy
+    container_name: torproxy
+    environment:
+      LOCATION: "CA"
+    ports:
+      - "18118:8118" # http(s) proxy
+      - "19050:9050" # socks5
+    restart: always
+
