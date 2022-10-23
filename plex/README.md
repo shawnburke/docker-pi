@@ -10,3 +10,23 @@ Runs the Plex media server (which is great, btw) on your Raspberry Pi.
 
 Use `direnv` or something similar to set the volume paths for this instance.
 
+## Troubleshooting
+
+If you see this error: 
+
+```
+PMS: failure detected. Read/write access is required for path: /config/Library/
+```
+
+
+Start into a prompt:
+```
+docker run -it -v "$CONFIG_VOLUME:/config" --entrypoint bash  greensheep/plex-server-docker-rpi:latest
+```
+
+Then in the prompt:
+
+```
+root@8a7a3ef67149:/# chown -R nobody:users /config
+root@8a7a3ef67149:/# chmod -R 777 /config
+```
